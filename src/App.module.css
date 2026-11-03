@@ -1,0 +1,6 @@
+.projetosContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem de linha se não couberem */
+    gap: 2rem; /* Cria um espaçamento uniforme entre os cards */
+    justify-content: center; /* Centraliza os cards na tela */
+}
