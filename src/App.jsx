@@ -13,7 +13,7 @@ function App() {
         <p>Sobre mim</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dicta sint a, omnis explicabo repudiandae accusamus ullam eius natus esse unde ad quam consequatur perspiciatis eligendi, modi ipsa ratione odio?</p>
       </Section>
-      <Section id={"projetos"} title={"Meus Projetos"}> 
+      <Section id={"projetos"} title={"Meus Projetos"} variant={"projetos"}> 
         <div className={styles.projetosContainer}>
           <Card imagem={logoEscura} title={"Blog"}>
             <p>teste</p>
@@ -25,7 +25,6 @@ function App() {
             <p>teste</p>
           </Card>
         </div>
-        
       </Section>
     </>
   )

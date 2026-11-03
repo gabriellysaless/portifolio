@@ -10,7 +10,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 2.5rem;
     color: #0A3F40;
-    margin-bottom: 4vh;
+    margin-bottom: 6vh;
     text-transform: uppercase;
     letter-spacing: 1px;
     text-align: center;
@@ -20,4 +20,16 @@
     width: 100%;
     max-width: 1200px;
     font-family: 'Inter', sans-serif;
+}
+
+.projetos {
+    background-color: #0A3F40;
+}
+
+.projetos .section__title {
+    color: #eeeeee;
+}
+
+.contato {
+    background-color: #E6F4EA
 }

@@ -63,7 +63,7 @@ h2 {
   font-size: 1.5em;
   line-height: 118%;
   letter-spacing: -0.24px;
-  margin: 8px;
+  margin: 5px;
   @media (max-width: 1024px) {
     font-size: 1.3rem;
   }
