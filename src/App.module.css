@@ -4,3 +4,11 @@
     gap: 2rem; /* Cria um espaçamento uniforme entre os cards */
     justify-content: center; /* Centraliza os cards na tela */
 }
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}

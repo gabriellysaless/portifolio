@@ -1,0 +1,26 @@
+.skillCard {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 0.75rem;
+
+    width: 200px;
+    padding: 12px 14px;
+
+    border: 1px solid #0f5b5c30;
+    border-radius: 12px;
+    
+    background-color: #0f5b5c08;
+    box-shadow: 2px 3px 12px rgba(0, 0, 0, 0.1);
+    
+}
+
+.skillCard__imagem {
+    width: 28px;
+}
+
+.skillCard__name {
+    color: #1f2937;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
