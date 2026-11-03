@@ -1,0 +1,23 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8vh 5vw;
+}
+
+.section__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #0A3F40;
+    margin-bottom: 4vh;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.section__content {
+    width: 100%;
+    max-width: 1200px;
+    font-family: 'Inter', sans-serif;
+}
