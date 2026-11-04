@@ -20,6 +20,7 @@
     width: 100%;
     max-width: 1200px;
     font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
 .projetos {
@@ -32,4 +33,11 @@
 
 .contato {
     background-color: #E6F4EA
+}
+
+/* Regra para celulares e telas menores que 768px */
+@media (max-width: 768px) {
+    .section {
+        padding: 5vh 1rem; /* Reduz o padding lateral para dar mais espaço ao conteúdo */
+    }
 }

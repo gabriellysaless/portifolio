@@ -19,12 +19,22 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .redesContainer {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .redesContainer h3 {
     display: block;
+}
+
+@media (max-width: 768px) {
+    .contatoContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }

@@ -6,6 +6,7 @@
     padding: 12px 5%;
     background-color: #CDE0E2;
     border-bottom: 1px solid #0f5b5c83;
+    position: relative;
 }
 
 .header__image {
@@ -35,4 +36,45 @@
 
 .header__nav a:hover {
     color: #2A9D90;
+}
+
+/* --- BOTÃO HAMBÚRGUER (Escondido por padrão no computador) --- */
+.header__button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0A3F40;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Oculta o nav padrão no celular */
+    .header__nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        
+        padding: 20px 0;
+        background-color: #CDE0E2;
+        border-bottom: 1px solid #0f5b5c83;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .header__nav--open {
+        display: flex;
+    }
 }
