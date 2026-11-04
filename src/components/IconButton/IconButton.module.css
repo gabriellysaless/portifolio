@@ -1,0 +1,21 @@
+.iconButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #0F172A;
+    color: #FFFFFF;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.iconButton:hover {
+    background-color: #0a3f40;
+    transform: translateY(-3px);
+}

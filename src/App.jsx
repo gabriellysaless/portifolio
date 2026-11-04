@@ -11,6 +11,11 @@ import reactImg from './assets/react.svg';
 import nextImg from './assets/next.svg';
 import javaImg from './assets/javascript.svg';
 import typeImg from './assets/typescript.svg';
+import IconButton from './components/IconButton/IconButton';
+
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { IoMdPin } from "react-icons/io";
 
 function App() {
   
@@ -47,9 +52,17 @@ function App() {
       </Section>
 
       <Section id={"contato"} title={"Vamos Conversar?"} variant={"contato"}>
+        <p>Entre em contato pelo formulário abaixo ou me contate pelas redes sociais!</p>
         <div className={styles.contatoContainer}>
-          <p>Entre em contato pelo formulário abaixo ou me contate pelas redes sociais!</p>
           <Form></Form>
+          <div>
+            <h3>CONTATO:</h3>
+            <div className={styles.redesContainer}>
+              <IconButton icon={<FaLinkedin />} link={"https://www.linkedin.com/in/gabrielly-de-oliveira-sales-almeida-71ab2424a/"}/>
+              <IconButton icon={<FaGithub />} link={"https://github.com/gabriellysaless"}/>
+            </div>
+            <span><IoMdPin /> Ouro Branco, MG</span>
+          </div>
         </div>
       </Section>
     </>
