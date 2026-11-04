@@ -1,11 +1,16 @@
+import styles from './App.module.css';
+
 import Card from './components/Card';
 import Header from './components/Header';
 import Section from './components/Section';
+import SkillTag from './components/SkillTag';
+import Form from './components/Form';
+
 import logoEscura from './assets/logo-escura.jpg';
 import reactImg from './assets/react.svg';
 import nextImg from './assets/next.svg';
-import styles from './App.module.css';
-import SkillTag from './components/SkillTag';
+import javaImg from './assets/javascript.svg';
+import typeImg from './assets/typescript.svg';
 
 function App() {
   
@@ -36,8 +41,16 @@ function App() {
         <div className={styles.skillsContainer}>
           <SkillTag imagem={reactImg} name={"React"}/>
           <SkillTag imagem={nextImg} name={"Next"}/>
+          <SkillTag imagem={javaImg} name={"JavaScript"}/>
+          <SkillTag imagem={typeImg} name={"TypeScript"}/>
         </div>
+      </Section>
 
+      <Section id={"contato"} title={"Vamos Conversar?"} variant={"contato"}>
+        <div className={styles.contatoContainer}>
+          <p>Entre em contato pelo formulário abaixo ou me contate pelas redes sociais!</p>
+          <Form></Form>
+        </div>
       </Section>
     </>
   )
