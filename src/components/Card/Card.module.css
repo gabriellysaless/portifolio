@@ -20,4 +20,24 @@
 
 .card__content {
     font-family: 'Inter', sans-serif;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.card__button {
+    width: 100%;
+    margin: 18px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #0f5b5c83;
+    background-color: #0f5b5c;
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.card__button:hover {
+    background-color: #0a3f40;
+    cursor: pointer;
 }

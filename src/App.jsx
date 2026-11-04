@@ -1,28 +1,30 @@
 import styles from './App.module.css';
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Card from './components/Card';
 import Header from './components/Header';
 import Section from './components/Section';
 import SkillTag from './components/SkillTag';
 import Form from './components/Form';
+import IconButton from './components/IconButton/IconButton';
 
-import logoEscura from './assets/logo-escura.jpg';
+import aNoticia from './assets/a-noticia.png';
+import cinelista from './assets/cinelista.png';
+import cardapio from './assets/cardapio.png';
 import reactImg from './assets/react.svg';
 import nextImg from './assets/next.svg';
 import javaImg from './assets/javascript.svg';
 import typeImg from './assets/typescript.svg';
-import IconButton from './components/IconButton/IconButton';
 
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoMdPin } from "react-icons/io";
+import ProjetoDetalhes from './pages/ProjetoDetalhes/ProjetoDetalhes';
 
-function App() {
+function Home() {
   
   return (
     <>
-      <Header/>
-
       <Section id={"sobre"} title={"Sobre mim"}> 
         <p>Sobre mim</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci dicta sint a, omnis explicabo repudiandae accusamus ullam eius natus esse unde ad quam consequatur perspiciatis eligendi, modi ipsa ratione odio?</p>
@@ -30,14 +32,14 @@ function App() {
 
       <Section id={"projetos"} title={"Meus Projetos"} variant={"projetos"}> 
         <div className={styles.projetosContainer}>
-          <Card imagem={logoEscura} title={"Blog"}>
-            <p>teste</p>
+          <Card imagem={cinelista} title={"Cinelista"} id={"cinelista"}>
+            <p>Aplicação web para explorar filmes, desenvolvida com Next.js e integração com a API TMDB.</p>
           </Card>
-          <Card imagem={logoEscura} title={"Lista de Tarefas"}>
-            <p>teste</p>
+          <Card imagem={aNoticia} title={"A Notícia"} id={"blog-a-noticia"}>
+            <p>Portal de notícias desenvolvido com Next.js, com categorias, rotas dinâmicas, SEO e pipeline CI/CD.</p>
           </Card>
-          <Card imagem={logoEscura} title={"PokeNext"}>
-            <p>teste</p>
+          <Card imagem={cardapio} title={"Cardápio Micro FrontEnd"} id={"cardapio-micro-frontend"}>
+            <p>Aplicação de cardápio digital com arquitetura Micro Frontends, Module Federation e comunicação entre aplicações.</p>
           </Card>
         </div>
       </Section>
@@ -69,4 +71,14 @@ function App() {
   )
 }
 
-export default App
+export default function App() {
+  return(
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/projeto/:id" element={<ProjetoDetalhes/>}/>
+      </Routes>
+    </BrowserRouter>
+  )
+}
