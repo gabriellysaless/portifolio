@@ -1,0 +1,21 @@
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contato__redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .contato {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
