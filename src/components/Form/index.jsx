@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
 
+const VITE_FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
+
 export default function Form() {
     const [status, setStatus] = useState("");
 
@@ -16,7 +18,7 @@ export default function Form() {
         const formResult = event.target; // guarda o valor antes de qualquer mudança
 
         try {
-            const resposta = await fetch("https://formspree.io/f/xyeevqyl", {
+            const resposta = await fetch(VITE_FORMSPREE_URL, {
                 method: "POST",
                 body: dados,
                 headers: {
@@ -27,6 +29,8 @@ export default function Form() {
                 setStatus("sucesso")
                 formResult.reset()
             } else {
+                const erro = await resposta.json();
+                console.log(erro);
                 setStatus("erro")
             };
         } catch {
