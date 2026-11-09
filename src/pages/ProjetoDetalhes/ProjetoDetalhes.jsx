@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import styles from './ProjetoDetalhes.module.css';
 import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from "react-icons/fa";
+import Section from '../../components/Section';
 
 // Simulação de um banco de dados local com os projetos
 const projetosDados = {
@@ -40,7 +41,7 @@ export default function ProjetoDetalhes() {
     }
 
     return (
-        <main className={styles.detalhesContainer}>
+        <Section className={styles.detalhesContainer}>
             <Link to="/" className={styles.voltarLink}>
                 <FaArrowLeft /> Voltar para Home
             </Link>
@@ -61,6 +62,6 @@ export default function ProjetoDetalhes() {
                     </a>
                 )}
             </div>
-        </main>
+        </Section>
     );
 }
